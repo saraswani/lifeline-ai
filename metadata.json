@@ -1,0 +1,5 @@
+{
+  "name": "LifeLine AI",
+  "description": "Real-time step-by-step digital first aid guidance with smart branching logic and hospital locator.",
+  "requestFramePermissions": ["geolocation"]
+}
