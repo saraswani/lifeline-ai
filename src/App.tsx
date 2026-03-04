@@ -34,7 +34,7 @@ import { EmergencyCategory, Step, Question } from './types';
 /**
  * Navbar component for navigation and theme toggling
  */
-const Navbar = ({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (v: boolean) => void }) => (
+const Navbar = ({ darkMode }: { darkMode: boolean }) => (
   <nav className="fixed top-0 left-0 right-0 z-50 glass px-6 py-4 flex justify-between items-center">
     <Link to="/" className="flex items-center gap-2">
       <div className="bg-medical-red p-2 rounded-lg">
@@ -672,7 +672,7 @@ export default function App() {
   return (
     <Router>
       <div className="min-h-screen">
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <Navbar darkMode={darkMode} />
         
         <main>
           <Routes>
