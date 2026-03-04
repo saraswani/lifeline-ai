@@ -43,12 +43,6 @@ const Navbar = ({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (v:
       <span className="text-xl font-bold tracking-tight text-medical-red">LifeLine AI</span>
     </Link>
     <div className="flex items-center gap-4">
-      <button 
-        onClick={() => setDarkMode(!darkMode)}
-        className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
-      >
-        {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-      </button>
       <Link to="/map" className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
         <MapPin className="w-5 h-5" />
       </Link>
@@ -669,15 +663,11 @@ const MapPage = () => {
 // --- Main App ---
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode] = useState(true);
 
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+  document.documentElement.classList.add('dark');
+}, []);
 
   return (
     <Router>
